@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Web Time",
+  "description": "This extenstion shows the load time of each webpage either from cache or from server.",
+  "version": "1.0",
+  "short_name": "Web Time",
+
+  "browser_action": {
+    "default_icon": "webTime.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "64": "webTime.png",
+    "128": "webTime.png"
+  },
+
+   "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["myScript.js"]    
+    }
+  ]
+}
